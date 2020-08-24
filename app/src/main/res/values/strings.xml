@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GitHub Searcher</string>
+    <string name="user_avatar_image_description">Current user avatar image</string>
+    <string name="repos_count">Repo: %d</string>
+    <string name="error">Error</string>
+    <string name="general_error_message">Something went wrong!</string>
+    <string name="ok">Ok</string>
 </resources>

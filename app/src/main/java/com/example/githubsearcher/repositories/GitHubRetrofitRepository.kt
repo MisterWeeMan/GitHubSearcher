@@ -10,7 +10,14 @@ class GitHubRetrofitRepository @Inject constructor(
 ): GitHubRemoteRepository {
 
     override suspend fun downloadAllUsers(): List<User> {
-        return gitHubClient.getAllUsers()
+        return gitHubClient
+            .getAllUsers()
+            .map {
+                val reposByUser = gitHubClient.getReposByUser(it.name)
+                it.copy(
+                    reposCount = reposByUser.size
+                )
+            }
     }
 
     override suspend fun downloadUser(username: String): User {

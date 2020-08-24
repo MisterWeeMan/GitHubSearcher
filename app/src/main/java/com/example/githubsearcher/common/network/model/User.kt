@@ -10,5 +10,6 @@ data class User(
     @SerializedName("created_at") val joinDate: String?,
     @SerializedName("followers") val followers: Int?,
     @SerializedName("following") val following: Int?,
-    @SerializedName("bio") val bio: String?
+    @SerializedName("bio") val bio: String?,
+    val reposCount: Int = 0
 )
